@@ -9,6 +9,7 @@ function App() {
       <Navi></Navi>
       <CategoryList></CategoryList>
       <ProductList></ProductList>
+      
     </div>
   );
 }
