@@ -19,10 +19,19 @@ export default class Navi extends Component {
           <NavbarToggler onClick={function noRefCheck() {}} />
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <Link to="/">Home</Link>
+              <NavLink>
+                <Link to="/">Home</Link>
+              </NavLink>
             </NavItem>
             <NavItem>
-              <Link to="/form1">Form 1</Link>
+              <NavLink>
+                <Link to="/form1">Form 1</Link>
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink>
+                <Link to="/form2">Form 2</Link>
+              </NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="https://github.com/reactstrap/reactstrap">
