@@ -1,6 +1,13 @@
 import React, { Component } from "react";
-import {Navbar, NavbarBrand, NavbarToggler, Nav, 
-    NavItem, NavLink} from "reactstrap"
+import { Link } from "react-router-dom";
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarToggler,
+  Nav,
+  NavItem,
+  NavLink,
+} from "reactstrap";
 import CartSummary from "./CartSummary";
 
 export default class Navi extends Component {
@@ -11,16 +18,22 @@ export default class Navi extends Component {
           <NavbarBrand href="/">Nortwind App</NavbarBrand>
           <NavbarToggler onClick={function noRefCheck() {}} />
           <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink href="/components/">Components</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">
-                  GitHub
-                </NavLink>
-              </NavItem>
-              <CartSummary removeFromCart={this.props.removeFromCart} cart = {this.props.cart}/>
-            </Nav>
+            <NavItem>
+              <Link to="/">Home</Link>
+            </NavItem>
+            <NavItem>
+              <Link to="/form1">Form 1</Link>
+            </NavItem>
+            <NavItem>
+              <NavLink href="https://github.com/reactstrap/reactstrap">
+                GitHub
+              </NavLink>
+            </NavItem>
+            <CartSummary
+              removeFromCart={this.props.removeFromCart}
+              cart={this.props.cart}
+            />
+          </Nav>
         </Navbar>
       </div>
     );
